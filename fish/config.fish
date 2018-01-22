@@ -85,3 +85,10 @@ set tacklebox_plugins pip python extract
 if test -e ~/.config/fish/overrides.fish
   . ~/.config/fish/overrides.fish
 end
+
+if test -e ~/.kubectl_aliases
+  . ~/.kubectl_aliases
+end
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '~/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '~/google-cloud-sdk/path.fish.inc'; else; . '~/google-cloud-sdk/path.fish.inc'; end; end
